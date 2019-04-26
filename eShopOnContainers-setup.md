@@ -27,13 +27,32 @@ initializeAKS.ps1 `
 
 ## Install eshoponcontainers using Helm charts
 
+Run the deployment script from the directory `k8s/helm/deploy-all.ps1` from eshopOnContainers code repository
+
+| Parameter | value |
+|---| --- |
+| External DNS name | `aks` |
+| Cluster Name | `abceshopCluster`|
+| AKS Resource Group Name | `abceshopsg` |
+| Image Tag | `dev` |
+
 ```Powershell
 
 .\deploy-all.ps1 `
 -externalDns aks `
--aksName aksIgniteCluster `
--aksRg MSIgniteSG `
+-aksName abceshopCluster `
+-aksRg abceshopsg `
 -imageTag dev
+
+```
+
+## Navigate to Kubernetes cluster dashboard
+
+```Powershell
+
+.\browseAKS.ps1 `
+-resourceGroupName abceshopsg `
+-clusterName abceshopCluster
 
 ```
 
@@ -45,5 +64,18 @@ kubectl apply -f aks-httpaddon-cfg.yaml
 
 ```
 
+## Verify deployment
+
+```bash
+
 kubectl get deployment
+
 kubectl get ing
+
+```
+
+## Access apps
+
+http://eshop.d1a63e27c7884fda85de.southeastasia.aksapp.io
+
+http://eshop.d1a63e27c7884fda85de.southeastasia.aksapp.io/webmvc
