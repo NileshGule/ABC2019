@@ -27,14 +27,43 @@ mv ./bin/istioctl.exe "C:/Program Files/Istio/"
 $PATH = [environment]::GetEnvironmentVariable("PATH", "User")
 [environment]::SetEnvironmentVariable("PATH", $PATH + "; C:/Program Files/Istio/", "User")
 
+```
+
+### Create secret for Kiali & Prometheus
+
+```Powershell
+$admin  = [System.Text.Encoding]::UTF8.GetBytes("admin")
+[System.Convert]::ToBase64String($admin)
+
+YWRtaW4=
+
+$password  = [System.Text.Encoding]::UTF8.GetBytes("1f2d1e2e67df")
+[System.Convert]::ToBase64String($password)
+
+MWYyZDFlMmU2N2Rm
+
+kubectl create ns istio-system
+
+kubectl apply -f ~\Projects\ABC2019\Istio\grafana-secret.yaml
+
+kubectl apply -f ~\Projects\ABC2019\Istio\kiali-secret.yaml
+
+```
+
+### InstallIstio from the downloaded folder using helm on AKS cluster
+
+Following commands needs to be run relative to the Istio directory contents where they are extracted. My folder was ~\Projects\Istio-1.1.3
+
+```Powershell
+
+helm install install/kubernetes/helm/istio-init --name istio-init --namespace istio-system
 
 helm install install/kubernetes/helm/istio --name istio --namespace istio-system `
 --set global.controlPlaneSecurityEnabled=true `
 --set servicegraph.enabled=true `
 --set grafana.enabled=true `
 --set tracing.enabled=true `
---set kiali.enabled=true `
---set global.proxy.includeIPRanges="10.244.0.0/16\,10.240.0.0/16"
+--set kiali.enabled=true
 
 ```
 
@@ -95,38 +124,3 @@ Deploy application using Powershell script from Powershell folder
 deployTechTalks-AKS.ps1
 
 ```
-
-## Port forward to deployed services
-
-```powershell
-
-kubectl port-forward $(kubectl get pod -l run=webfront-deployment -o jsonpath='{.items[0].metadata.name}') 80:80
-
-```
-
-### Install Istio Gateway from Istio folder
-
-```Powershell
-
-kubectl apply -f techtalks-gateway.yaml
-
-```
-
-### Port forward to webfrontend
-
-```powershell
-
-kubectl port-forward svc/webfront 80:80
-
-```
-
-### Expose ajax CDN as virtual service entry
-
-```Powershell
-
-kubectl apply -f .\external-cdn-access.yaml
-
-```
-kubectl -n istio-system
-
-kubectl -n istio-system port-forward istio-ingressgateway-5bf6c54577-gssn2 80
