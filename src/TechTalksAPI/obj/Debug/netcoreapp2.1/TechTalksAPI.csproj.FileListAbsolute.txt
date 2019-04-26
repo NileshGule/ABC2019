@@ -1,0 +1,14 @@
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\bin\Debug\netcoreapp2.1\TechTalksAPI.deps.json
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\bin\Debug\netcoreapp2.1\TechTalksAPI.runtimeconfig.json
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\bin\Debug\netcoreapp2.1\TechTalksAPI.runtimeconfig.dev.json
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\bin\Debug\netcoreapp2.1\TechTalksAPI.dll
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\bin\Debug\netcoreapp2.1\TechTalksAPI.pdb
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.csprojAssemblyReference.cache
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.csproj.CoreCompileInputs.cache
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.RazorAssemblyInfo.cache
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.RazorAssemblyInfo.cs
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.AssemblyInfoInputs.cache
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.AssemblyInfo.cs
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.RazorTargetAssemblyInfo.cache
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.dll
+C:\Nilesh\Projects\AKS-learning-series\src\TechTalksAPI\obj\Debug\netcoreapp2.1\TechTalksAPI.pdb

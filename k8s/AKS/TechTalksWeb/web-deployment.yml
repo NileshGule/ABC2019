@@ -1,0 +1,65 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: techtalksweb-v1  
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: techtalksweb
+        version: v1
+    spec:
+      containers:
+      - name: techtalksweb
+        image: nileshgule/techtalksweb:v1
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+        - name: TechTalksAPIUrl
+          value: "http://techtalksapi:8080/api/techtalks/" 
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        imagePullPolicy: Always   
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: techtalksweb-v2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: techtalksweb
+        version: v2
+    spec:
+      containers:
+      - name: techtalksweb
+        image: nileshgule/techtalksweb:v2
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "1"
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+        - name: TechTalksAPIUrl
+          value: "http://techtalksapi:8080/api/techtalks/" 
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        imagePullPolicy: Always   
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+---
