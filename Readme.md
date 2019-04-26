@@ -47,3 +47,10 @@ Contains the source code.
 Start with `setup.md` which provisions the AKS cluster and deploys the Tech Talks application. The cluster is setup with Istio Service Mesh.
 
 To deploy the eShopOnContainers reference application, refer to the `eshopOnContainers-setup.md` file.
+
+## Slides
+
+The slides used during the presentation will be available at
+- https://www.slideshare.net/nileshgule/presentations
+- https://speakerdeck.com/nileshgule/
+
