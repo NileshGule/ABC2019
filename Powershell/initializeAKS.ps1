@@ -8,6 +8,8 @@ Param(
     [parameter(Mandatory=$false)]
     [string]$clusterName="abc2019TechTalks",
     [parameter(Mandatory=$false)]
+    [string]$dnsNamePrefix="msignitetechtalks",
+    [parameter(Mandatory=$false)]
     [int16]$workerNodeCount=3,
     [parameter(Mandatory=$false)]
     [string]$kubernetesVersion="1.13.5"
@@ -31,7 +33,7 @@ az aks create `
 --resource-group=$resourceGroupName `
 --name=$clusterName `
 --node-count=$workerNodeCount `
---dns-name-prefix=msignitetechtalks `
+--dns-name-prefix=$dnsNamePrefix `
 --generate-ssh-keys `
 --node-vm-size=Standard_D2_v2 `
 --kubernetes-version=$kubernetesVersion `
