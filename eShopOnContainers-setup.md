@@ -27,6 +27,8 @@ initializeAKS.ps1 `
 
 ## Install eshoponcontainers using Helm charts
 
+Make sure to clone the eshopOnContainers repository from https://github.com/NileshGule/eShopOnContainers
+
 Run the deployment script from the directory `k8s/helm/deploy-all.ps1` from eshopOnContainers code repository
 
 | Parameter | value |
@@ -79,3 +81,5 @@ kubectl get ing
 http://eshop.d1a63e27c7884fda85de.southeastasia.aksapp.io
 
 http://eshop.d1a63e27c7884fda85de.southeastasia.aksapp.io/webmvc
+
+*Note:* The urls mentioned here will not be available after the demo is completed. In order to save costs, the AKS cluster is deleted after the demo / presentation and the url will vary when the new cluster is provisioned.
