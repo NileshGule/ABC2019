@@ -54,3 +54,4 @@ The slides used during the presentation will be available at
 - https://www.slideshare.net/nileshgule/presentations
 - https://speakerdeck.com/nileshgule/
 
+The same can be found under the [Presentation](Presentation) directory
