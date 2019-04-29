@@ -48,6 +48,8 @@ Start with [setup.md](setup.md) which provisions the AKS cluster and deploys the
 
 To deploy the `eShopOnContainers` reference application, refer to the [eshopOnContainers-setup.md](eshopOnContainers-setup.md) file.
 
+---
+
 ## Slides
 
 The slides used during the presentation will be available at
