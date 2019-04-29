@@ -56,6 +56,7 @@ The slides used during the presentation will be available at
 - https://www.slideshare.net/nileshgule/presentations
 [![Slideshare](Presentation/Images/Slideshare.PNG)](http://bit.ly/GAB19SS)
 - https://speakerdeck.com/nileshgule/
+
 [![Speakerdeck](Presentation/Images/Speakerdeck.PNG)](http://bit.ly/GAB19SD)
 
 The same can be found under the [Presentation](Presentation) directory
